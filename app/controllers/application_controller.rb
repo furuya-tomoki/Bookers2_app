@@ -8,6 +8,7 @@ before_action :authenticate_user!, except: [:top, :about]
     user_path(current_user)
   end
 
+# loginに必要な記載
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
      devise_parameter_sanitizer.permit(:account_update, keys: [:name])
