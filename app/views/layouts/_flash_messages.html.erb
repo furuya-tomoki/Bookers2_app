@@ -1,0 +1,7 @@
+<!-- 実行message -->
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %> p-0 text-success">
+    <%= message %>
+  </div>
+<% end %>
+<!-- 実行message -->
