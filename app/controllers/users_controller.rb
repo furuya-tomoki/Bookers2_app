@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-
-
   def index
     @users = User.all
+    # タイムライン上に表示する投稿データを取得
     @book = Book.new
   end
 
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
 
   private
 
-
+  # post_image_paramsでは、フォームで入力されたデータが投稿データとして許可されているパラメータかどうかをチェック
   def user_params
     params.require(:user).permit(:name, :profile_image, :introduction)
   end
